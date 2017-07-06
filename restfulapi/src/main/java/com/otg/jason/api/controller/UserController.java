@@ -13,16 +13,16 @@ import java.util.*;
 public class UserController {
     // 创建线程安全的Map
     static Map<Long, User> users = Collections.synchronizedMap(new HashMap<Long, User>());
-    static{
-        User user = new User();
-        user.setId(12L);
-        user.setName("jason");
-        user.setAge(23);
-        user.setNickName("sunwonder");
-        user.setSex("F");
-        user.setType("Java");
-        users.put(user.getId(),user);
-    }
+//    static{
+//        User user = new User();
+//        user.setId(12L);
+//        user.setName("jason");
+//        user.setAge(23);
+//        user.setNickName("sunwonder");
+//        user.setSex("F");
+//        user.setType("Java");
+//        users.put(user.getId(),user);
+//    }
 
     @RequestMapping(value="/", method= RequestMethod.GET)
     public List<User> getUserList() {
